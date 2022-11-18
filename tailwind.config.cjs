@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "bg-img": "url('./src/assets/img/image/home-bg.jpg')",
+        "bg-menu": "url('./src/assets/img/image/menu-bg.jpg')",
       },
       flex: {
         content: "1 1 42rem",
@@ -14,6 +15,17 @@ module.exports = {
         float: {
           "0%, 100%": { transform: "translateY(0rem)" },
           "50%": { transform: "translateY(-7rem)" },
+        },
+
+        image: {
+          "0%, 100%": {
+            transform: "scale(.9)",
+            "border-radius": "4% 95% 6% 95%/95% 4% 92% 5%",
+          },
+          "50%": {
+            transform: "scale(.8)",
+            "border-radius": "95% 4% 97% 5%/4% 94% 3% 95%",
+          },
         },
       },
     },

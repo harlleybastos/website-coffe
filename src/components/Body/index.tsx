@@ -3,6 +3,7 @@ import Image from "../../assets/img/image/capsula.png";
 import ImageTwo from "../../assets/img/image/xicara-branca.png";
 import ImageTree from "../../assets/img/image/coffee-cup.png";
 import ImageArrow from "../../assets/img/image/arrow.png";
+import { ShapeContent } from "../../shared/types";
 
 const Body = () => {
   const [currentImage, setCurrentImage] = useState<string>(Image);
@@ -44,10 +45,7 @@ const Body = () => {
     },
   ];
 
-  interface ShapeContent {
-    [index: number]: string;
-  }
-
+  
   const contentText: ShapeContent = {
     0: "Sunset Capuccino com Whey Protein",
     1: "Sunset Xícara Personalizada",
@@ -79,7 +77,7 @@ const Body = () => {
       </div>
       <div className="relative image-slider flex items-center justify-center py-[3rem] px-[0]">
         <div
-          className={`absolute bottom-[15rem] md:left-[30rem] md:bottom-[14rem] lg:bottom-[14rem] xl:bottom-[14rem] ${currentRight} lg:right-0`}
+          className={`absolute bottom-[15rem] md:bottom-[14rem] lg:bottom-[14rem] xl:bottom-[14rem] ${currentRight} lg:right-0`}
         >
           <img
             className={`animate-[float_2s_linear_infinite] w-[10rem] lg:w-[12rem] xl:w-[18rem]`}
