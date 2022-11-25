@@ -8,7 +8,7 @@ import { ShapeContent } from "../../shared/types";
 const Body = () => {
   const [currentImage, setCurrentImage] = useState<string>(Image);
   const [currentRight, setCurrentRight] = useState<string>(
-    "left-[-2rem] sm:left-[14rem] md:left-[14rem] lg:left-[32rem] xl:left-[55rem]"
+    "sm:left-[calc(25%-100px)] sm_secondary:left-[calc(15%-100px)] md:left-[calc(10%-100px)] lg:left-[calc(5%-100px)] 2xl:left-[calc(10%-100px)]"
   );
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -18,9 +18,7 @@ const Body = () => {
       onClick: (index: number) => {
         setCurrentIndex(index);
         setCurrentImage(Image);
-        setCurrentRight(
-          "left-[-1rem] md:left-[15rem] lg:left-[25rem] xl:left-[55rem]"
-        );
+        setCurrentRight("sm:left-[calc(25%-100px)] sm_secondary:left-[calc(15%-100px)] md:left-[calc(10%-100px)] lg:left-[calc(5%-100px)] 2xl:left-[calc(10%-100px)]");
       },
     },
     {
@@ -28,9 +26,7 @@ const Body = () => {
       onClick: (index: number) => {
         setCurrentIndex(index);
         setCurrentImage(ImageTwo);
-        setCurrentRight(
-          "left-[10rem]  md:left-[25rem] lg:left-[35rem] xl:left-[65rem]"
-        );
+        setCurrentRight("left-[calc(50%-100px)]");
       },
     },
     {
@@ -38,14 +34,11 @@ const Body = () => {
       onClick: (index: number) => {
         setCurrentIndex(index);
         setCurrentImage(ImageTree);
-        setCurrentRight(
-          "left-[21rem] md:left-[35rem] lg:left-[45rem] xl:left-[75rem]"
-        );
+        setCurrentRight("left-[calc(95%-100px)]");
       },
     },
   ];
 
-  
   const contentText: ShapeContent = {
     0: "Sunset Capuccino com Whey Protein",
     1: "Sunset Xícara Personalizada",
@@ -59,7 +52,7 @@ const Body = () => {
     >
       <div className="row flex items-center flex-wrap gap-[1.5rem]">
         <div className="content flex-content">
-          <h3 className="text-[4rem] md:text-[4.5rem] xl:text-[6.5rem] text-[#433] uppercase">
+          <h3 className="sm:text-[3rem] md:text-[4.5rem] lg:text-[6.5rem] xl:text-[5rem] 2xl:text-[5rem] text-[#433] uppercase">
             {contentText[currentIndex]}
           </h3>
           <a href="#" className="btn">
@@ -75,25 +68,21 @@ const Body = () => {
           />
         </div>
       </div>
-      <div className="relative image-slider flex items-center justify-center py-[3rem] px-[0]">
-        <div
-          className={`absolute bottom-[15rem] md:bottom-[14rem] lg:bottom-[14rem] xl:bottom-[14rem] ${currentRight} lg:right-0`}
-        >
-          <img
-            className={`animate-[float_2s_linear_infinite] w-[10rem] lg:w-[12rem] xl:w-[18rem]`}
-            src={ImageArrow}
-            alt=""
-          />
-        </div>
+      <div className="relative flex justify-between 2xl:mx-auto 2xl:max-w-4xl">
         {content.map((item, index) => (
           <img
             key={index}
-            className="h-[9rem] my-[0] mx-[0.5rem] mt-[5rem] hover:translate-y-[-2rem]"
+            className="w-[9rem] h-[9rem] object-contain hover:translate-y-[-2rem]"
             src={item.image}
             alt=""
             onClick={() => item.onClick(index)}
           />
         ))}
+        <img
+          className={`absolute animate-[float_2s_linear_infinite] w-[10rem] lg:w-[12rem] xl:w-[18rem] ${currentRight}  bottom-[10rem]`}
+          src={ImageArrow}
+          alt=""
+        />
       </div>
     </section>
   );
