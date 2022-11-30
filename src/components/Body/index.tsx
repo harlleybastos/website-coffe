@@ -18,7 +18,9 @@ const Body = () => {
       onClick: (index: number) => {
         setCurrentIndex(index);
         setCurrentImage(Image);
-        setCurrentRight("sm:left-[calc(25%-100px)] sm_secondary:left-[calc(15%-100px)] md:left-[calc(10%-100px)] lg:left-[calc(5%-100px)] 2xl:left-[calc(10%-100px)]");
+        setCurrentRight(
+          "sm:left-[calc(25%-100px)] sm_secondary:left-[calc(15%-100px)] md:left-[calc(10%-100px)] lg:left-[calc(5%-100px)] 2xl:left-[calc(10%-100px)]"
+        );
       },
     },
     {
@@ -52,7 +54,7 @@ const Body = () => {
     >
       <div className="row flex items-center flex-wrap gap-[1.5rem]">
         <div className="content flex-content">
-          <h3 className="sm:text-[3rem] md:text-[4.5rem] lg:text-[6.5rem] xl:text-[5rem] 2xl:text-[5rem] text-[#433] uppercase">
+          <h3 className="sm:text-[3rem] sm_secondary:text-[3.5rem]  md:text-[4.5rem] lg:text-[6.5rem] xl:text-[5rem] 2xl:text-[5rem] text-[#433] uppercase">
             {contentText[currentIndex]}
           </h3>
           <a href="#" className="btn">

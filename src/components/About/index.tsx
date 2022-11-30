@@ -3,6 +3,8 @@ import Image from "../../assets/img/image/about-img.png";
 import AboutIconOne from "../../assets/img/image/about-icon-1.png";
 import AboutIconTwo from "../../assets/img/image/about-icon-2.png";
 import AboutIconThree from "../../assets/img/image/about-icon-3.png";
+import SugarICon from "../../assets/img/image/sugar.png";
+import ProteinIcon from "../../assets/img/image/protein.png";
 
 const About = () => {
   return (
@@ -26,29 +28,30 @@ const About = () => {
 
         <div className="content flex-content">
           <h3 className="title text-[#443] text-[3rem] leading-[1.8]">
-            what's make our coffee special!
+            Oque faz o nosso café especial ?
           </h3>
-          <p className="text-[#443] text-[1.5rem] leading-[1.8] py-[1rem] px-0">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse et
-            commodi, ad, doloremque obcaecati maxime quam minima dolore mollitia
-            saepe quos, debitis incidunt. Itaque possimus adipisci ipsam harum
-            at autem.
+          <p className="text-[#443] text-[1.5rem] leading-[1.8] py-[1rem] px-0 normal-case">
+            Nos da Sunset coffee buscamos fazer os nossos produtos com paixão,
+            para você se apaixonar por cada detalhe. Buscamos alcançar a
+            excelência em tudo oque fazemos, garantindo qualidade superior não
+            apenas no produto, mas em todo processo de produção, incluindo
+            qualidade de vida. Acreditamos na sofisticação por meio da
+            simplicidade, naturalidade e na autenticidade. Nos queremos ter o
+            prazer de você descobrir e degustar a melhor esperiencia de café com
+            proteína.
           </p>
-          <a href="#" className="btn">
-            read more
-          </a>
           <div className="icons-container">
             <div className="icons">
               <img src={AboutIconOne} alt="" />
-              <h3>quality coffee</h3>
+              <h3 className="normal-case">Café de Categoria Especial</h3>
             </div>
             <div className="icons">
-              <img src={AboutIconTwo} alt="" />
-              <h3>our branches</h3>
+              <img src={SugarICon} alt="" />
+              <h3>Sem adição açucares</h3>
             </div>
             <div className="icons">
-              <img src={AboutIconThree} alt="" />
-              <h3>free delivery</h3>
+              <img src={ProteinIcon} alt="" />
+              <h3>Proteina de Valor Biologico</h3>
             </div>
           </div>
         </div>

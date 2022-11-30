@@ -1,9 +1,6 @@
 import React from "react";
+
 import { ReviewItems } from "../../constants";
-
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,18 +9,20 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Reviews = () => {
-  
   return (
     <section className="review" id="review">
-      <h1 className="heading">
+      <h1 className="heading text-[9rem] uppercase text-transparent stroke-slate-500 traking-[.2rem] text-center pointer-events-none relative">
         {" "}
-        reviews <span>what people says</span>{" "}
+        Avaliações{" "}
+        <span className="absolute text-[3rem] text-[#443] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+          Oque as pessoas dizem
+        </span>{" "}
       </h1>
 
       <div className="swiper review-slider">
         <div className="swiper-wrapper">
-          {ReviewItems.map((item) => (
-            <div className="swiper-slide box">
+          {ReviewItems.map((item, index) => (
+            <div key={index} className="swiper-slide box">
               <i className="fas fa-quote-left"></i>
               <i className="fas fa-quote-right"></i>
               <img src={item.imageSource} alt="" />
@@ -43,7 +42,6 @@ const Reviews = () => {
 
         <div className="swiper-pagination"></div>
       </div>
-      
     </section>
   );
 };
