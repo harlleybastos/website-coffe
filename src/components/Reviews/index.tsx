@@ -14,6 +14,11 @@ const Reviews = () => {
         spacing: 40,
         perView: 2,
       },
+      breakpoints: {
+        "(max-width: 768px)": {
+          slides: { perView: 2, spacing: 5 },
+        },
+      },
     },
     [
       (slider) => {
@@ -56,7 +61,7 @@ const Reviews = () => {
         </span>{" "}
       </h1>
 
-      <div ref={sliderRef} className="review-slider">
+      <div ref={sliderRef} className="review-slider hidden md_secondary:block">
         <div className="swiper-wrapper">
           {ReviewItems.map((item, index) => (
             <div key={index} className="box keen-slider__slide">
@@ -76,6 +81,33 @@ const Reviews = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="md_secondary:hidden flex flex-col justify-center items-center">
+        {ReviewItems.map((item, index) => (
+          <div
+            key={index}
+            className="flex justify-center flex-col items-center py-16 max-w-[34.375rem]"
+          >
+            <img
+              className="object-cover rounded-full"
+              src={item.imageSource}
+              alt=""
+            />
+            <div className="stars py-5">
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+            </div>
+            <p className="normal-case">{item.firstText}</p>
+            <h3 className="py-2 ">
+              <strong>{item.secondText}</strong>
+            </h3>
+            <span>{item.review}</span>
+          </div>
+        ))}
       </div>
     </section>
   );

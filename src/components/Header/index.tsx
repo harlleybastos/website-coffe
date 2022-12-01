@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <nav
       className={`bg-white z-10 fixed left-0 right-0 h-[8rem] ${
-        !isOpenMenu && "h-[9.5rem]"
+        isOpenMenu && "h-[9.5rem]"
       } flex text-2xl border-gray-200 px-2 md_secondary:px-8 py-2.5 rounded shadow-lg`}
     >
       <div className="container flex flex-wrap items-center justify-between mx-auto">
@@ -50,10 +50,10 @@ const Header = () => {
           </button>
         </div>
         <motion.div
-          animate={!isOpenMenu ? "open" : "closed"}
+          animate={!isOpenMenu && 'open'}
           variants={variants}
           className={`items-center justify-between ${
-            isOpenMenu && "hidden"
+            !isOpenMenu && "hidden"
           } w-full md_secondary:flex md_secondary:w-auto md_secondary:order-1`}
           id="navbar-search"
         >
