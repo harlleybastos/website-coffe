@@ -25,36 +25,6 @@ const Header = () => {
           </span>
         </a>
         <div className="flex md_secondary:order-2">
-          <div className="relative hidden md_secondary:block">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg
-                className="w-8 h-8 text-gray-500"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              <span className="sr-only">Search icon</span>
-            </div>
-            <input
-              type="text"
-              id="search-navbar"
-              className="block text-2xl w-full p-3 pl-12 text-gray-900 border-solid border border-gray-500 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 shadow-lg"
-              placeholder="Capuccino..."
-            />
-          </div>
-          <button
-            type="button"
-            className="ml-8 sm_secondary:mr-8 text-white bg-orange-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center"
-          >
-            Fazer Login
-          </button>
           <button
             data-collapse-toggle="navbar-search"
             type="button"
@@ -87,33 +57,10 @@ const Header = () => {
           } w-full md_secondary:flex md_secondary:w-auto md_secondary:order-1`}
           id="navbar-search"
         >
-          <div className="relative mt-3 md_secondary:hidden">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg
-                className="w-8 h-8 text-gray-500"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </div>
-            <input
-              type="text"
-              id="search-navbar"
-              className="block w-full p-3 pl-12 text-2xl border-solid border text-gray-900 border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Capuccino..."
-            />
-          </div>
           <ul className="flex text-2xl flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md_secondary:flex-row md_secondary:space-x-8 md_secondary:mt-0 md_secondary:text-sm md_secondary:font-medium md_secondary:border-0 md_secondary:bg-white">
             <li>
               <a
-                href="#"
+                href="#home"
                 className="block text-2xl py-2 pl-3 pr-4 text-white bg-blue-700 rounded md_secondary:bg-transparent md_secondary:text-blue-700 md_secondary:p-0"
                 aria-current="page"
               >
@@ -122,18 +69,34 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#"
-                className="block text-2xl py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md_secondary:hover:bg-transparent md_secondary:hover:text-blue-700 md_secondary:p-0"
+                href="#about"
+                className="block normal-case text-2xl py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md_secondary:hover:bg-transparent md_secondary:hover:text-blue-700 md_secondary:p-0"
               >
                 Porque nos
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="#menu"
                 className="block text-2xl  py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md_secondary:hover:bg-transparent md_secondary:hover:text-blue-700 md_secondary:p-0"
               >
                 Cardápio
+              </a>
+            </li>
+            <li>
+              <a
+                href="#review"
+                className="block text-2xl  py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md_secondary:hover:bg-transparent md_secondary:hover:text-blue-700 md_secondary:p-0"
+              >
+                Avaliações
+              </a>
+            </li>
+            <li>
+              <a
+                href="#partnership"
+                className="block text-2xl  py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md_secondary:hover:bg-transparent md_secondary:hover:text-blue-700 md_secondary:p-0"
+              >
+                Parceria
               </a>
             </li>
           </ul>
