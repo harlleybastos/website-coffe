@@ -4,7 +4,7 @@ import Image from "../../assets/img/image/menu-1.png";
 
 const Menu = () => {
   return (
-    <section className="menu bg-bg-menu bg-no-repeat bg-cover" id="menu">
+    <section className="menu" id="menu">
       <h1 className="heading text-[9rem] uppercase text-transparent stroke-slate-500 traking-[.2rem] text-center pointer-events-none relative">
         {" "}
         Menu{" "}

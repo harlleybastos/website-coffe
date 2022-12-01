@@ -48,10 +48,7 @@ const Body = () => {
   };
 
   return (
-    <section
-      className="home min-h-[100vh] pt-[12rem] bg-bg-img bg-no-repeat bg-center bg-cover"
-      id="home"
-    >
+    <section className="home min-h-[100vh] pt-[12rem]" id="home">
       <div className="row flex items-center flex-wrap gap-[1.5rem]">
         <div className="content flex-content">
           <h3 className="sm:text-[3rem] sm_secondary:text-[3.5rem]  md:text-[4.5rem] lg:text-[6.5rem] xl:text-[5rem] 2xl:text-[5rem] text-[#433] uppercase">

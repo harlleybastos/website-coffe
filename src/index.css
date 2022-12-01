@@ -31,6 +31,14 @@
     scroll-behavior: smooth;
   }
 
+  .home {
+    min-height: 100vh;
+    padding-top: 12rem;
+    background: url(./assets/img/image/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   section {
     padding: 2rem 9%;
   }
@@ -89,6 +97,12 @@
     cursor: pointer;
     margin-top: 1rem;
     font-size: 1.7rem;
+  }
+
+  .menu {
+    background: url(./assets/img/image/menu-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .btn:hover {
