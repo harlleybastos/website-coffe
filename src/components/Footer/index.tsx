@@ -79,8 +79,16 @@ const Footer = () => {
 
       <div className="credit">
         {" "}
-        Desenvolvido por <span>Harlley Bastos</span> | Todos os Direitos
-        Reservados{" "}
+        Desenvolvido por{" "}
+        <strong>
+          <a
+            href="https://www.linkedin.com/in/harlley-bastos/"
+            target={"_blank"}
+          >
+            Harlley Bastos
+          </a>
+        </strong>{" "}
+        | Todos os Direitos Reservados{" "}
       </div>
     </section>
   );

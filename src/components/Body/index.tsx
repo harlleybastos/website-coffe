@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Image from "../../assets/img/image/capsula.png";
-import ImageTwo from "../../assets/img/image/xicara-branca.png";
+import Image from "../../assets/img/products/Capsula-Cappuccino.png";
+import ImageTwo from "../../assets/img/products/Xicara-Branca.png";
 import ImageTree from "../../assets/img/image/coffee-cup.png";
 import ImageArrow from "../../assets/img/image/arrow.png";
 import { ShapeContent } from "../../shared/types";
@@ -42,7 +42,7 @@ const Body = () => {
   ];
 
   const contentText: ShapeContent = {
-    0: "Sunset Capuccino com Whey Protein",
+    0: "Sunset Capuccino com Proteína",
     1: "Sunset Xícara Personalizada",
     2: "Sunset Cup Personalizado",
   };

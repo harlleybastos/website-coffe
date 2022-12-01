@@ -1,6 +1,9 @@
 import React from "react";
 import { MenuItems } from "../../constants";
 import Image from "../../assets/img/image/menu-1.png";
+import { Outlet } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -15,15 +18,16 @@ const Menu = () => {
 
       <div className="box-container flex flex-wrap gap-[2rem] justify-center">
         {MenuItems.map((item, index) => (
-          <a key={index} href="#" className="box">
+          <Link key={index} to={`products/${index}`} className="box">
             <img src={item.imageSource} alt="" />
             <div className="content">
               <h3>{item.firstText}</h3>
               <p>{item.secondText}</p>
               <span>{item.price}</span>
             </div>
-          </a>
+          </Link>
         ))}
+        <Outlet />
       </div>
     </section>
   );
